@@ -80,7 +80,7 @@ const HomePage = () => {
     updateScore();
   }, [score.getScore()]);
 
-  //Selection of the answer
+  //handle selection of the correct answer
   const handleNumberClick = (number) => {
     setSelectedNumber(number);
     if (number === correctNumber) {

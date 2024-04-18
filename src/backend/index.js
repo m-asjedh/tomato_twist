@@ -19,6 +19,7 @@ app.use(cookieParser());
 mongoose.connect(
   "mongodb+srv://fmasjedh:itz_asjedh@tomatotwist.zoexlmi.mongodb.net/?retryWrites=true&w=majority&appName=TomatoTwist"
 );
+console.log("Server connected to  MonogoDB Atlas");
 
 //user signup
 /* hash the password

@@ -4,8 +4,10 @@ import axios from "axios";
 import { Scores } from "../../class/Scores";
 import { Link } from "react-router-dom";
 
+// Initialize score instance
 const score = new Scores();
 
+//this component is responsible for the players who choose to play as guest
 const GuestPage = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [correctNumber, setCorrectNumber] = useState(null);
@@ -13,6 +15,7 @@ const GuestPage = () => {
   const [timeLeft, setTimeLeft] = useState(60);
   const [hearts, setHearts] = useState(3);
 
+  //function fetching the tomato API
   const fetchAPI = async () => {
     try {
       const url = "https://marcconrad.com/uob/tomato/api.php";
@@ -40,6 +43,7 @@ const GuestPage = () => {
     fetchAPI();
   }, []);
 
+  //handle selection of the correct answer
   const handleNumberClick = (number) => {
     setSelectedNumber(number);
     if (number === correctNumber) {
