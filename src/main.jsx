@@ -12,6 +12,7 @@ import LeadboardPage from "./frontend/Routes/LeadboardPage.jsx";
 import Logout from "./frontend/Routes/Logout.jsx";
 import { AuthContext, AuthProvider } from "./context/Auth.context.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import GuestPage from "./frontend/Routes/GuestPage.jsx";
 
 const PrivateRoute = ({ element }) => {
   const { user } = useContext(AuthContext);
@@ -35,10 +36,10 @@ const routes = (
         element={<PrivateRoute element={<LeadboardPage />} />}
       />
       <Route path="/logout" element={<PrivateRoute element={<Logout />} />} />
+      <Route path="/guest" element={<GuestPage />} />
     </Route>
   </Routes>
 );
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

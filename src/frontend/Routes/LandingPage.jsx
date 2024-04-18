@@ -48,6 +48,19 @@ const LandingPage = () => {
             Login
           </motion.button>
         </Link>
+        <Link to="/guest">
+          <motion.button
+            whileHover={{
+              scale: 1.2,
+              boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.2)",
+            }}
+            whileTap={{ scale: 0.5 }}
+            transition={{ duration: 0.15 }}
+            className="py-3 px-6 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg shadow-md focus:outline-none"
+          >
+            Guest
+          </motion.button>
+        </Link>
       </div>
     </motion.div>
   );
