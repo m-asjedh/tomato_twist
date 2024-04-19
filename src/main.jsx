@@ -11,7 +11,12 @@ import ProfilePage from "./frontend/Routes/ProfilePage.jsx";
 import LeadboardPage from "./frontend/Routes/LeadboardPage.jsx";
 import Logout from "./frontend/Routes/Logout.jsx";
 import { AuthContext, AuthProvider } from "./context/Auth.context.jsx";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import GuestPage from "./frontend/Routes/GuestPage.jsx";
 
 const PrivateRoute = ({ element }) => {
